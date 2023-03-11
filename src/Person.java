@@ -1,17 +1,21 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public class Person {
 
 
-    enum Gender {
+    public enum Gender {
         MALE,
         FEMALE
     }
-    private String name;
+    static String name;
     private String address;
     private String mobileNumber;
     private String eMail;
     private Gender gender;
     private String dateOfBirth;
+
 
     public Person(String name, String address, String mobileNumber, String eMail, String gender) {
         this.name = name;
@@ -22,6 +26,22 @@ public class Person {
     }
 
     public String toString() {
-        return "name: "+ this.name + "\nmobile number: " + this.mobileNumber + "\ngender: " + this.gender;
+        return "name: "+ name + "\nmobile number: " + this.mobileNumber + "\ngender: " + this.gender;
+    }
+
+    public static String getPersonName() {
+        return "Name: " + name;
+    }
+
+    public static int generateId(String fileName) {
+        ReadingFromCSV.getDataFromCSVFile(fileName);
+        List<String[]> readData = new ArrayList<>();
+        readData = ReadingFromCSV.readData;
+
+        return readData.size() > 0 ? (Integer.parseInt(readData.get(readData.size() -1)[0]) + 1) : 1;
+    }
+
+    public String generateCSVString() {
+        return this.name.trim() + "|||" + this.address.trim() + "|||" + this.mobileNumber.trim() + "|||" + this.eMail.trim() + "|||" + this.gender;
     }
 }
