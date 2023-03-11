@@ -21,24 +21,14 @@ public class Record {
         saveToCSV();
     }
 
+
     public static void addRecord() {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter record details," );
 
-        int patientId;
-        do {
-            System.out.print("Patient Id: " );
-            patientId = sc.nextInt();
-            sc.nextLine();
-            if(!ErrorChecking.isPersonIdValid("patient.csv",patientId)){
-                System.out.println("Invalid Patient ID");
-            }
-        } while (!ErrorChecking.isPersonIdValid("patient.csv",patientId));
+        int patientId = Person.getValidPersonId("Patient","patient.csv");
 
-
-        System.out.print("Doctor Id: " );
-        int doctorId = sc.nextInt();
-        sc.nextLine();
+        int doctorId = Person.getValidPersonId("Doctor","patient.csv");
 
         System.out.print("Symptoms: ");
         String symptoms = sc.nextLine();
@@ -57,19 +47,18 @@ public class Record {
         new Record(recordId,patientId,doctorId,symptoms,diagnoses,treatments,notes);
     }
     public void saveToCSV(){
-
-        WritingToCSV.addDataToCSVFile("record.csv", Integer.toString(recordId).trim() + "," +
-//                        Integer.toString(patient.patientId).trim() + "," +
-//                        Integer.toString(doctor.doctorId).trim() + "," +
-                        symptoms.trim() + "," + diagnoses.trim() + "," +
-                        treatments.trim() + "," + notes.trim()
-        );
+        WritingToCSV.addDataToCSVFile("record.csv", generateCSVString());
+    }
+    public String generateCSVString() {
+        return this.recordId + "|||" + this.patientId + "|||" + this.doctorId + "|||" + this.symptoms + "|||" + this.diagnoses + "|||" + this.treatments + "|||" + this.notes;
     }
     public String toString() {
-        return "Record ID: " + this.recordId + "\nPatient id : " +
-//                patient.getPatientIdAndName() +
-//                "\ndoctor ID: " + doctor +
-                "\nSymptoms" + this.symptoms + "\nDiagnoses" + this.diagnoses + "\nTreatments" + this.treatments +
+        return  "Record ID: " + this.recordId +
+                "\nPatient id : " + patientId +
+                "\ndoctor ID: " + doctorId +
+                "\nSymptoms" + this.symptoms +
+                "\nDiagnoses" + this.diagnoses +
+                "\nTreatments" + this.treatments +
                 "\nNotes" + this.notes;
     }
 

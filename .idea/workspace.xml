@@ -5,16 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4ff8c95f-ce1a-48d3-b837-9ea7af74c2d3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/doctor.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/patient.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/record.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ErrorChecking.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ReadingFromCSV.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/WritingToCSV.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/record.csv" beforeDir="false" afterPath="$PROJECT_DIR$/record.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Doctor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Doctor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Patient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Patient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Person.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Record.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Record.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/TestMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TestMain.java" afterDir="false" />
@@ -45,14 +38,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "D:/$ECS/1 YEAR/2 SEM/BECS 12243 - Object Oriented Programming/BECS 12243 - LAB/$ Project/code/TEAM12_Project_HMS"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/$ECS/1 YEAR/2 SEM/BECS 12243 - Object Oriented Programming/BECS 12243 - LAB/$ Project/code/TEAM12_Project_HMS&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\$ECS\1 YEAR\2 SEM\BECS 12243 - Object Oriented Programming\BECS 12243 - LAB\$ Project\code\TEAM12_Project_HMS" />

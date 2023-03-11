@@ -1,7 +1,7 @@
 import javax.print.Doc;
 import java.util.Scanner;
 
-public class Doctor extends Person{
+public class Doctor extends Person {
     int doctorId;
     String specialty;
     String licenseNumber;

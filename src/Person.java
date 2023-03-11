@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Scanner;
 
 public class Person {
 
@@ -43,5 +44,20 @@ public class Person {
 
     public String generateCSVString() {
         return this.name.trim() + "|||" + this.address.trim() + "|||" + this.mobileNumber.trim() + "|||" + this.eMail.trim() + "|||" + this.gender;
+    }
+
+    public static int getValidPersonId(String person, String fileName){
+        Scanner sc = new Scanner(System.in);
+        int id;
+        do {
+            System.out.print(person + " Id: " );
+            id = sc.nextInt();
+            sc.nextLine();
+            if(!ErrorChecking.isPersonIdValid(fileName,id)){
+                System.out.println("Invalid "+ person +" ID");
+            }
+        } while (!ErrorChecking.isPersonIdValid(fileName,id));
+
+        return id;
     }
 }

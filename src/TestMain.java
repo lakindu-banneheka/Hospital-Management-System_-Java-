@@ -12,6 +12,5 @@ public class TestMain {
 //        System.out.println(Person.generateId("patient.csv"));
         Record.addRecord();
 
-
     }
 }
